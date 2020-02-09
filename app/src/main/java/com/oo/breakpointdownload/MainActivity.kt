@@ -8,7 +8,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 
-class MainActivity : AppCompatActivity(), FileDownloadManager.DownLoadListener {
+class MainActivity : AppCompatActivity(), DownLoadListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,13 +40,15 @@ class MainActivity : AppCompatActivity(), FileDownloadManager.DownLoadListener {
 //            "https://www.bookben.net/down/all/34933.txt",
 //            "https://www.bookben.net/down/all/2257.txt"
         )
-
-        for (url in arrayOf) {
-            FileDownloadManager.download(this,url,this)
-        }
+//        val url ="http://e.hiphotos.baidu.com/zhidao/pic/item/d439b6003af33a87d5ef2a14c45c10385343b539.jpg"
+        val url ="https://www.bookben.net/down/all/34042.txt"
+        BigFileDownloader.download(this,url,this)
+//        for (url in arrayOf) {
+//            FileDownloadManager.download(this,url,this)
+//        }
     }
 
-    override fun downloadFinished(path: String, process: Int) {
+    override fun downloadFinished(path: String) {
         Toast.makeText(this, "$path", Toast.LENGTH_SHORT).show()
     }
 

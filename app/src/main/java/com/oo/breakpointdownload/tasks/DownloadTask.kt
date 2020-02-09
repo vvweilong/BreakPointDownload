@@ -12,7 +12,7 @@ import javax.net.ssl.HttpsURLConnection
  * 下载任务 执行单元
  * 支持断点续传
 */
-class DownloadTask(val url:String,val path:String,val offset:Long,val callback:Callback):Runnable {
+class DownloadTask(val url:String,val path:String,val offset:Long,val lengh:Long=-1,val callback:Callback):Runnable {
     val TAG = "DownloadTask"
     open interface Callback{
         fun started()
