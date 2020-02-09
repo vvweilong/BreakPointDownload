@@ -40,8 +40,7 @@ class MainActivity : AppCompatActivity(), DownLoadListener {
 //            "https://www.bookben.net/down/all/34933.txt",
 //            "https://www.bookben.net/down/all/2257.txt"
         )
-//        val url ="http://e.hiphotos.baidu.com/zhidao/pic/item/d439b6003af33a87d5ef2a14c45c10385343b539.jpg"
-        val url ="https://www.bookben.net/down/all/34042.txt"
+        val url ="https://media.w3.org/2010/05/sintel/trailer.mp4"
         BigFileDownloader.download(this,url,this)
 //        for (url in arrayOf) {
 //            FileDownloadManager.download(this,url,this)
